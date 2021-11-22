@@ -1,0 +1,451 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Harry Potter", sans-serif;
+  font-family: "Harry Potter", sans-serif;
+}
+:root {
+  scroll-behavior: smooth;
+}
+body {
+  background-image: url(imaganes/fondo2.jpg);
+}
+header {
+  width: 100%;
+}
+h1 {
+  font-size: 3.5rem;
+}
+h2 {
+  font-size: 3rem;
+  color: white;
+  background-color: violet;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 5px;
+  align-items: center;
+  width: 25%;
+  margin: auto;
+  border-radius: 10px;
+  border: 5px blue solid;
+  box-shadow: blueviolet 5px;
+}
+h3 {
+  justify-content: center;
+  text-align: center;
+}
+/* menu */
+.nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  font-size: 25px;
+  transition: all 0.5s ease;
+}
+.nav.active {
+  background: rgba(252, 252, 252, 0);
+  padding: 15px;
+}
+.nav.active .logo,
+.nav.active a,
+.nav.active .menu-btn i {
+  color: black;
+}
+.nav.active a:hover {
+  background: black;
+}
+.logo {
+  font-size: 25px;
+  color: black;
+  font-weight: 100;
+}
+.menu {
+  display: flex;
+}
+.menu li {
+  list-style: none;
+  margin: 10px;
+}
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+.menu li a:hover {
+  padding: 5px 10px;
+  background: #fff;
+  color: rgb(255, 255, 255);
+  border-radius: 15px;
+}
+.menu-btn {
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .menu-btn {
+    display: block;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background: wheat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    transform: translateX(-100%);
+  }
+  .menu li {
+    margin: 15px 0;
+  }
+  .menu.active {
+    transform: translateX(0);
+  }
+}
+.scrol {
+  height: 100px;
+}
+/* showcase */
+
+.showcase {
+  width: 100%;
+  height: 100vh;
+  background-image: url(imaganes/hogwarst.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#bienvenida {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /*-webkit-text-stroke: 0.01rem;
+  -webkit-text-stroke-color: rgb(0, 0, 0);*/
+}
+
+.subtitulo {
+  font-size: 1.5rem;
+}
+/* casas */
+#subtitulo {
+  text-align: center;
+  margin: 40px 0px 30px 0px;
+  color: white;
+}
+#casas {
+  width: 100%;
+  height: 700px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  padding: 50px;
+}
+
+@media screen and (max-width: 1280px) {
+  #casas {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 700px 700px 700px 700px;
+    height: 1415px;
+  }
+  .sombrero {
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 930px) {
+  #casas {
+    grid-template-columns: 100%;
+    height: 100%;
+  }
+}
+.casa {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5px;
+  background-color: white;
+  background-image: url(imaganes/ravenclaw.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20rem;
+  border: 5px solid;
+  -moz-border-image: -moz-linear-gradient(left, #3acfd5 0%, #3a4ed5 100%);
+  -webkit-border-image: -webkit-linear-gradient(left, #3acfd5 0%, #3a4ed5 100%);
+  border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%);
+  border-image-slice: 1;
+}
+.casa2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5px;
+  background-color: rgba(255, 255, 255, 0.864);
+  background-image: url(imaganes/gryffindor.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20rem;
+  border: 5px solid;
+  border-radius: 15px;
+  -moz-border-image: -moz-linear-gradient(left, #d5973a 0%, #dd8818 100%);
+  -webkit-border-image: -webkit-linear-gradient(left, #e88d16 0%, #d5973a 100%);
+  border-image: linear-gradient(to right, #d5a43a 0%, #d5563a 100%);
+  border-image-slice: 1;
+}
+.casa3 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5px;
+  background-color: white;
+  background-image: url(imaganes/hufflepuff.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20rem;
+  border: 5px solid;
+  -moz-border-image: -moz-linear-gradient(left, #c5d53a 0%, #d2d53a 100%);
+  -webkit-border-image: -webkit-linear-gradient(left, #c5d53a 0%, #d2d53a 100%);
+  border-image: linear-gradient(to right, #4a5205 0%, #d5b93a 100%);
+  border-image-slice: 1;
+}
+
+.casa4 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5px;
+  background-color: rgb(255, 255, 255);
+  background-image: url(imaganes/SLYTHERINn.bmp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 5px solid;
+  -moz-border-image: -moz-linear-gradient(left, #75ca71 0%, #80d53a 100%);
+  -webkit-border-image: -webkit-linear-gradient(left, #3ad559 0%, #6ed53a 100%);
+  border-image: linear-gradient(to right, #2c8840 0%, #80d53a 100%);
+  border-image-slice: 1;
+}
+
+/* sombreo magico */
+
+.sombrero {
+  display: grid;
+  border: 1px black solid;
+  font-size: 90px;
+  width: 95%;
+  margin: auto;
+  height: 350px;
+  grid-column: 1/5;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  background-image: url(imaganes/salon.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.sombrero-fondo {
+  background-color: white;
+}
+
+.sombrero-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.sombrero-titulo {
+  font-size: 80px;
+}
+.boton-hat {
+  font-size: 70px;
+  width: 280px;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border-radius: 30px;
+}
+
+/* datos curiosos dde los libros */
+
+#datos {
+  /*aqui va algo xd*/
+  list-style: none;
+}
+hr {
+  margin: 35px;
+}
+
+.datos-titulo {
+  text-align: center;
+  margin: 60px;
+}
+
+#libros-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 90%;
+  margin: auto;
+  height: 90vh;
+  padding: 15px;
+  gap: 10px;
+}
+
+.libros {
+  border: 1px black solid;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.p-libros {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.789);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.libros2 {
+  border: 1px black solid;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.libros3 {
+  border: 1px black solid;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.libros4 {
+  border: 1px black solid;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.img-libros {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* formulario de quien eres? */
+#quien-eres {
+  margin-top: 30px;
+}
+
+#formulario {
+  width: 100%;
+  display: flex;
+  background-image: url(imaganes/formulario\ font.jpg);
+  min-height: 100vh;
+}
+
+#formulario h2 {
+  text-align: center;
+}
+
+.form {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 1em;
+  padding: 10px;
+  border: 2px black solid;
+  margin: auto;
+}
+
+.form_container {
+  width: 100%;
+  display: grid;
+  gap: 1em;
+  grid-auto-columns: 100%;
+}
+
+.form_input {
+  padding: 0.8em 1em;
+  outline: none;
+  border: none;
+  border: 1px solid white;
+  font-size: 20px;
+  border-radius: 7px;
+}
+
+.form_input--mesage {
+  resize: none;
+  padding: 1.8em 1em;
+  margin-bottom: 1.5em;
+}
+
+label {
+  font-size: 25px;
+  text-align: center;
+}
+
+.form_cta {
+  background-color: white;
+  font-size: 1rem;
+  border: none;
+  font-weight: 300;
+  padding: 0.7em 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.form_tittle {
+  text-align: center;
+  color: #3a4ed5;
+  font-size: 39px;
+}
+
+@media screen and (max-width: 1280px) {
+  #libros-content {
+    width: 100%;
+    height: 100%;
+  }
+  .sombrero {
+    display: flex;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  #libros-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    height: 100%;
+  }
+  #quien-eres {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+  }
+  #titulo1 {
+    font-size: 2.2rem;
+  }
+}
